@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace _007_Variable2
 {
-    internal class Program
+    class Program
     {
         static void Main(string[] args)
         {
