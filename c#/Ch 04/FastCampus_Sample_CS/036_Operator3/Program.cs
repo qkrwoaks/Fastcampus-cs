@@ -17,9 +17,9 @@ namespace _036_Operator3
         {
             int num = 10;
 
-            Console.WriteLine("num : " + num++);
+            Console.WriteLine("num : " + num++); // 후치 연산
             Console.WriteLine("num : " + num);
-            Console.WriteLine("num : " + ++num);
+            Console.WriteLine("num : " + ++num); // 전치 연산
 
             Console.WriteLine("num : " + num--);
             Console.WriteLine("num : " + num);

@@ -7,7 +7,7 @@
     <ProjectGuid>{376C44E3-01C2-4CAB-880D-9D928351E8E5}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_039_Operator6</RootNamespace>
-    <AssemblyName>_039_Operator6</AssemblyName>
+    <AssemblyName>039_Operator6</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
