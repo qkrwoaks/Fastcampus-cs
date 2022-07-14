@@ -7,7 +7,7 @@
     <ProjectGuid>{ED8C09B8-31C9-42C2-9E98-037A7E1889F2}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_043_Operator_Branch2</RootNamespace>
-    <AssemblyName>_043_Operator_Branch2</AssemblyName>
+    <AssemblyName>043_Operator_Branch2</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

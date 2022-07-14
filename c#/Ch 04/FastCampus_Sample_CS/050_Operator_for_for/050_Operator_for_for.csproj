@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B7EF19BF-E7D8-4EBC-B3F3-9F53B2BCD2B5}</ProjectGuid>
+    <ProjectGuid>{49D58B1F-1E3F-47E6-9776-A292F4BE0373}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_044_Operator_Branch3</RootNamespace>
-    <AssemblyName>044_Operator_Branch3</AssemblyName>
+    <RootNamespace>_050_Operator_for_for</RootNamespace>
+    <AssemblyName>_050_Operator_for_for</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
