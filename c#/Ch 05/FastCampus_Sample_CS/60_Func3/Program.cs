@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _60_Func3
+namespace _060_Func3
 {
     internal class Program
     {
