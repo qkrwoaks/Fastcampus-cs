@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{49D58B1F-1E3F-47E6-9776-A292F4BE0373}</ProjectGuid>
+    <ProjectGuid>{2DB7BF2B-CD33-4F22-805F-FEFBC6044D5A}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_050_Operator_for_for</RootNamespace>
-    <AssemblyName>050_Operator_for_for</AssemblyName>
+    <RootNamespace>_056_Check</RootNamespace>
+    <AssemblyName>056_Check</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
