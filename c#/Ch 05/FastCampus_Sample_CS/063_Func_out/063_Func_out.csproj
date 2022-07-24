@@ -7,7 +7,7 @@
     <ProjectGuid>{7EBAC1A1-1719-42DE-8521-AD8A35107D46}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_063_Func_out</RootNamespace>
-    <AssemblyName>_063_Func_out</AssemblyName>
+    <AssemblyName>063_Func_out</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
