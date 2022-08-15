@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DA7A385E-16FF-4E4C-BA9F-56FFF413AC4D}</ProjectGuid>
+    <ProjectGuid>{2BD28BF2-E389-47AE-9CE3-AA5B4356FCAC}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_068_1_Array_Init2</RootNamespace>
-    <AssemblyName>068_1_Array_Init2</AssemblyName>
+    <RootNamespace>_069_Array_Multi</RootNamespace>
+    <AssemblyName>069_Array_Multi</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

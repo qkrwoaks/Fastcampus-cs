@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DA7A385E-16FF-4E4C-BA9F-56FFF413AC4D}</ProjectGuid>
+    <ProjectGuid>{BCCF6228-E626-4AD4-82DF-F02A3E31F266}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_068_1_Array_Init2</RootNamespace>
-    <AssemblyName>068_1_Array_Init2</AssemblyName>
+    <RootNamespace>_071_Array_Flex</RootNamespace>
+    <AssemblyName>071_Array_Flex</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

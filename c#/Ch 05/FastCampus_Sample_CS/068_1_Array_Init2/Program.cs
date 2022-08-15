@@ -12,7 +12,7 @@ namespace _068_1_Array_Init2
         {
             int[] arrNum = new int[3];
             int[] arrNum2 = new int[] { 0, 1, 2 };
-            int[] arrNum3 = new int[3] {0, 1, 2 };
+            int[] arrNum3 = new int[3] { 0, 1, 2 };
             int[] arrNum4 = { 0, 1, 2 };
 
             string[] arrWeek = { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun" };
@@ -45,9 +45,9 @@ namespace _068_1_Array_Init2
 
             Console.WriteLine("\n----------------------------------------");
 
-            foreach(string tempStr in arrWeek)
+            foreach (string tempStr in arrWeek)
             {
-                Console.Write("{0}", tempStr);
+                Console.Write("{0} ", tempStr);
             }
         }
     }
