@@ -1,0 +1,35 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _072_Array_Func1
+{
+    internal class Program
+    {
+        static void SwapArray(int oriIndex, int desIndex, int[] array)
+        {
+            int temp = array[oriIndex];
+            array[oriIndex] = array[desIndex];
+            array[desIndex] = temp;
+        }
+
+        static void Main(string[] args)
+        {
+            int[] arrNum = new int[] { 1, 2, 3, 4 };
+
+            foreach (int temp in arrNum)
+            {
+                Console.WriteLine("   {0}", temp);
+            }
+
+            SwapArray(0, 1, arrNum);
+
+            foreach (int temp in arrNum)
+            {
+                Console.WriteLine("   {0}", temp);
+            }
+        }
+    }
+}
