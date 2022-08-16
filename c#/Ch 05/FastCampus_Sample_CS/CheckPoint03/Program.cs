@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 /// <summary>
 /// CheckPoint03 - 배열을 활용하기
@@ -13,6 +14,7 @@ namespace CheckPoint03
     {
         const int MAP_X = 7;
         const int MAP_Y = 22;
+        const int DELAY_TIME = 300;
 
         static void UpdateView(char[] _tile, int[,] _map)
         {
@@ -29,12 +31,34 @@ namespace CheckPoint03
             }
         }
 
+        static void ClearView()
+        {
+            Thread.Sleep(DELAY_TIME);
+            Console.Clear();
+        }
+
+        static void UpdateGO(int[] _arrIndexX, int[,] _map)
+        {
+            for (int i = 0; i < _arrIndexX.Length; i++)
+            {
+                int indexMapX = i + 1;
+                int indexY = _arrIndexX[i];
+
+                int temp = _map[indexMapX, _arrIndexX[i]];
+                _map[indexMapX, _arrIndexX[i + 1]] = temp;
+                _map[indexMapX, _arrIndexX[i]] = 0;
+
+                if (_arrIndexX[i] < 19)
+                    _arrIndexX[i]++;
+            }
+        }
+
         static void Main(string[] args)
         {
 
             char[] tile = { ' ', '-', '|', '1', '2', '3', '4', '5' };
 
-            int[,] map = new int[7, 22]
+            int[,] map = new int[MAP_X, MAP_Y]
             {
                 {1, 1, 1, 1, 1, 1, 1,1,1, 1,1, 1, 1, 1, 1, 1, 1,1,1, 1,1,1},
                 {3, 0, 0, 0, 0, 0, 0,0,0, 0,0, 0, 0, 0, 0, 0, 0,0,0, 0,0,0},
@@ -45,7 +69,14 @@ namespace CheckPoint03
                 {1, 1, 1, 1, 1, 1, 1,1,1, 1,1, 1, 1, 1, 1, 1, 1,1,1, 1,1,1}
             };
 
-            UpdateView(tile, map);
+            int[] arrIndexX = { 0, 0, 0, 0, 0};
+
+            while (true)
+            {
+                UpdateGO(arrIndexX, map);
+                UpdateView(tile, map);
+                ClearView();
+            }
         }
     }
 }
