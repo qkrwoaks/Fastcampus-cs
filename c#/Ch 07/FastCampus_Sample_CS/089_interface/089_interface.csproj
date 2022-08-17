@@ -7,7 +7,7 @@
     <ProjectGuid>{5E60281A-4DED-475D-BD2B-F606E81F420B}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_089_interface</RootNamespace>
-    <AssemblyName>_089_interface</AssemblyName>
+    <AssemblyName>089_interface</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
