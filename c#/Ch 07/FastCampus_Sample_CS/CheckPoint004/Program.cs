@@ -144,6 +144,7 @@ namespace CheckPoint004
 
         public void CreateUnit()
         {
+            Console.Clear();
             Console.WriteLine(" ++ 유닛 생성 ++");
             Console.WriteLine(" (1)바바리안 (2)자이언츠 (3)힐러 (0: 뒤로가기) ");
 
@@ -179,9 +180,116 @@ namespace CheckPoint004
                 default:
                     break;
             }
+
+            indexCount++;
+        }
+
+        public void UnitRunMenu()
+        {
+            Console.WriteLine(" =======> 유닛 생성");
+            Console.WriteLine(" (1)바바리안 (2)자이언츠 (3)힐러 (4)전체 달리기 (0: 뒤로가기) ");
+
+            UNIT selUnit = UNIT.NONE;
+            string inputStr = Console.ReadLine();
+
+            if (inputStr.Equals("1") || inputStr.Equals("2") || inputStr.Equals("3"))
+            {
+                selUnit = (UNIT)int.Parse(inputStr);
+                UnitRun(selUnit);
+            }
+            else if (inputStr.Equals("4"))
+            {
+                Console.Clear();
+            }
+        }
+
+        private void UnitRun()
+        {
+            for (int i = 0; i < indexCount; i++)
+            {
+                    arrArmys[i].Run();
+            }
+        }
+
+        private void UnitRun(UNIT unit)
+        {
+            switch (unit)
+            {
+                case UNIT.BARBARIAN:
+                    for (int i = 0; i < indexCount; i++)
+                    {
+                        if (arrArmys[i] is Barbarian)
+                            arrArmys[i].Run();
+                    }
+                    break;
+                case UNIT.GIANT:
+                    for (int i = 0; i < indexCount; i++)
+                    {
+                        if (arrArmys[i] is Giant)
+                            arrArmys[i].Run();
+                    }
+                    break;
+                case UNIT.HEALER:
+                    for (int i = 0; i < indexCount; i++)
+                    {
+                        if (arrArmys[i] is Healer)
+                            arrArmys[i].Run();
+                    }
+                    break;
+            }
+        }
+
+        public void UnitAttackMenu()
+        {
+            Console.WriteLine(" =======> 유닛 공격 =========");
+            Console.WriteLine(" (1)바바리안 (2)자이언츠 (3)힐러 (4)전체 달리기 (0: 뒤로가기) ");
+
+            UNIT selUnit = UNIT.NONE;
+            string inputStr = Console.ReadLine();
+
+            if (inputStr.Equals("1") || inputStr.Equals("2") || inputStr.Equals("3"))
+            {
+                selUnit = (UNIT)int.Parse(inputStr);
+                UnitRun(selUnit);
+            }
+            else if (inputStr.Equals("4"))
+            {
+                UnitRun();
+            }
+            else
+            {
+                Console.Clear();
+            }
+        }
+
+        private void UnitAttack(UNIT unit)
+        {
+            switch (unit)
+            {
+                case UNIT.BARBARIAN:
+                    for (int i = 0; i < indexCount; i++)
+                    {
+                        if (arrArmys[i] is Barbarian)
+                            arrArmys[i].Attack();
+                    }
+                    break;
+                case UNIT.GIANT:
+                    for (int i = 0; i < indexCount; i++)
+                    {
+                        if (arrArmys[i] is Giant)
+                            arrArmys[i].Attack();
+                    }
+                    break;
+                case UNIT.HEALER:
+                    for (int i = 0; i < indexCount; i++)
+                    {
+                        if (arrArmys[i] is Healer)
+                            arrArmys[i].Attack();
+                    }
+                    break;
+            }
         }
     }
-
 
     internal class Program
     {
@@ -189,8 +297,9 @@ namespace CheckPoint004
         {
             UnitControl control = new UnitControl();
             string selNumStr;
+            bool isLoop = true;
 
-            while (true)
+            while (isLoop)
             {
                 selNumStr = control.Menu();
 
@@ -200,10 +309,13 @@ namespace CheckPoint004
                         control.CreateUnit();
                         break;
                     case "2": // 달리기
+                        control.UnitRunMenu();
                         break;
                     case "3": // 공격
+                        control.UnitAttackMenu();
                         break;
                     default:
+                        isLoop = false;
                         break;
                 }
             }
