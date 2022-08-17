@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A38A5110-56D6-4C43-B079-19B353D1AF9E}</ProjectGuid>
+    <ProjectGuid>{23084945-4087-405B-87C2-B4FACDFDE9A1}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_086_partial</RootNamespace>
-    <AssemblyName>086_partial</AssemblyName>
+    <RootNamespace>_088_struct</RootNamespace>
+    <AssemblyName>_088_struct</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,9 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AA.ADD.cs" />
-    <Compile Include="AA.cs" />
-    <Compile Include="AA.MUL.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

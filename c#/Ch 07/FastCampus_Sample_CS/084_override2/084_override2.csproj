@@ -7,7 +7,7 @@
     <ProjectGuid>{F90FD066-CEBC-4911-B7BA-DDB7A5B3D7DF}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_084_override2</RootNamespace>
-    <AssemblyName>_084_override2</AssemblyName>
+    <AssemblyName>084_override2</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
