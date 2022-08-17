@@ -53,28 +53,78 @@ namespace CheckPoint03
             }
         }
 
+        static bool UpdateRandomGO(int[] _arrIndexX, int[,] _map, Random _random)
+        {
+            bool isFinish = false;
+
+            for (int i = 0; i < _arrIndexX.Length; i++)
+            {
+                if (_arrIndexX[i] >= 20)
+                {
+                    isFinish = true;
+                    break;
+                }
+            }
+
+            int randomIndex = _random.Next(0, 5);
+
+            int indexY = _arrIndexX[randomIndex];
+
+            int temp = _map[randomIndex + 1, indexY];
+            _map[randomIndex + 1, indexY + 1] = temp;
+            _map[randomIndex + 1, indexY] = 0;
+
+            _arrIndexX[randomIndex]++;
+
+            return isFinish;
+        }
+
         static void Main(string[] args)
         {
-
+            Random random = new Random();
             char[] tile = { ' ', '-', '|', '1', '2', '3', '4', '5' };
 
             int[,] map = new int[MAP_X, MAP_Y]
             {
                 {1, 1, 1, 1, 1, 1, 1,1,1, 1,1, 1, 1, 1, 1, 1, 1,1,1, 1,1,1},
-                {3, 0, 0, 0, 0, 0, 0,0,0, 0,0, 0, 0, 0, 0, 0, 0,0,0, 0,0,0},
-                {4, 0, 0, 0, 0, 0, 0,0,0, 0,0, 0, 0, 0, 0, 0, 0,0,0, 0,0,0},
-                {5, 0, 0, 0, 0, 0, 0,0,0, 0,0, 0, 0, 0, 0, 0, 0,0,0, 0,0,0},
-                {6, 0, 0, 0, 0, 0, 0,0,0, 0,0, 0, 0, 0, 0, 0, 0,0,0, 0,0,0},
-                {7, 0, 0, 0, 0, 0, 0,0,0, 0,0, 0, 0, 0, 0, 0, 0,0,0, 0,0,0},
+                {3, 0, 0, 0, 0, 0, 0,0,0, 0,0, 0, 0, 0, 0, 0, 0,0,0, 0,2,0},
+                {4, 0, 0, 0, 0, 0, 0,0,0, 0,0, 0, 0, 0, 0, 0, 0,0,0, 0,2,0},
+                {5, 0, 0, 0, 0, 0, 0,0,0, 0,0, 0, 0, 0, 0, 0, 0,0,0, 0,2,0},
+                {6, 0, 0, 0, 0, 0, 0,0,0, 0,0, 0, 0, 0, 0, 0, 0,0,0, 0,2,0},
+                {7, 0, 0, 0, 0, 0, 0,0,0, 0,0, 0, 0, 0, 0, 0, 0,0,0, 0,2,0},
                 {1, 1, 1, 1, 1, 1, 1,1,1, 1,1, 1, 1, 1, 1, 1, 1,1,1, 1,1,1}
             };
 
-            int[] arrIndexX = { 0, 0, 0, 0, 0};
+            int[] arrIndexX = { 0, 0, 0, 0, 0 };
+            bool isFinish = false;
 
             while (true)
             {
-                UpdateGO(arrIndexX, map);
-                UpdateView(tile, map);
+                if (isFinish)
+                {
+                    Console.WriteLine();
+                    for (int i = 0; i < arrIndexX.Length; i++)
+                    {
+                        if (arrIndexX[i] >= 19)
+                        {
+                            Console.Write("달리기 결과=> 1등 : ", (i + 1));
+
+                        }
+                    }
+                    Console.Write("\n다시 시작하려면 0을 입력");
+                    string inputSr = Console.ReadLine();
+
+                    if (inputSr == "0")
+                    {
+
+                    }
+                    else
+                    {
+                        Console.Write("\n나가기");
+                        break;
+                    }
+                }
+
                 ClearView();
             }
         }
