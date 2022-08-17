@@ -7,7 +7,7 @@
     <ProjectGuid>{E83D69D2-BCB7-44A5-9FA0-B1C366E031E5}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_078_Constructor</RootNamespace>
-    <AssemblyName>_078_Constructor</AssemblyName>
+    <AssemblyName>078_Constructor</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

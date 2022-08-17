@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{66F12160-F7FB-4623-B654-8C4354BB3E57}</ProjectGuid>
+    <ProjectGuid>{BC66A2CA-42D5-415F-A078-03C0D2513BA9}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_080_static</RootNamespace>
-    <AssemblyName>080_static</AssemblyName>
+    <RootNamespace>_081_02_classInheritance</RootNamespace>
+    <AssemblyName>081_02_classInheritance</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
