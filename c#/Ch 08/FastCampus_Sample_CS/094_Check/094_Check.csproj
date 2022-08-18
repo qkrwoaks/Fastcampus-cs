@@ -7,7 +7,7 @@
     <ProjectGuid>{4E7DDC69-8299-4A80-B4FD-7682284EFD1F}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_094_Check</RootNamespace>
-    <AssemblyName>_094_Check</AssemblyName>
+    <AssemblyName>094_Check</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
