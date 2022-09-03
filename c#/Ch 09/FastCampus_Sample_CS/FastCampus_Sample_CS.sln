@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "117_delegateDeclare", "117_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "118_delegateParam", "118_delegatePatern\118_delegateParam.csproj", "{CEC31CB4-05CB-456E-9E42-D7AAE5F26F10}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "119_event", "119_event\119_event.csproj", "{006C69D0-9F58-4511-9738-48A673A233C3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,6 +119,10 @@ Global
 		{CEC31CB4-05CB-456E-9E42-D7AAE5F26F10}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CEC31CB4-05CB-456E-9E42-D7AAE5F26F10}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CEC31CB4-05CB-456E-9E42-D7AAE5F26F10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{006C69D0-9F58-4511-9738-48A673A233C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{006C69D0-9F58-4511-9738-48A673A233C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{006C69D0-9F58-4511-9738-48A673A233C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{006C69D0-9F58-4511-9738-48A673A233C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
