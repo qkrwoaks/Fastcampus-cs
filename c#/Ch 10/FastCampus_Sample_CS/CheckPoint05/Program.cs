@@ -50,17 +50,22 @@ namespace CheckPoint05
                 {
                     case "0":
                         Console.WriteLine("프로그램 종료");
-                        isLoop = false;     
+                        isLoop = false;
                         break;
                     case "1":
+                        SortId(listData);
                         break;
                     case "2":
+                        SortTotal(listData);
                         break;
                     case "3":
+                        SortKor(listData);
                         break;
                     case "4":
+                        FindDataUp(listData, true);
                         break;
                     case "5":
+                        FindDataUp(listData, false);
                         break;
 
                     default:
@@ -98,6 +103,96 @@ namespace CheckPoint05
             foreach (var item in _listData)
             {
                 Console.WriteLine("{0}\t{1}\t{2}\t{3}\t{4}", item.Id, item.Kor, item.Math, item.Eng, item.Total);
+            }
+        }
+
+        static void SortId(List<CStudent> _listData)
+        {
+            _listData.Sort(delegate (CStudent a, CStudent b)
+            {
+                if (a.Id > b.Id) return 1;
+                else if (a.Id < b.Id) return -1;
+                else return 0;
+            });
+
+            Console.WriteLine("아이디 정렬");
+            PrintList(_listData);
+        }
+
+        static void SortTotal(List<CStudent> _listData)
+        {
+            var items = from item in _listData
+                        orderby item.Total descending
+                        select item;
+
+            List<CStudent> sortData = items.ToList<CStudent>();
+
+            Console.WriteLine("총점 정렬");
+            PrintList(sortData);
+        }
+
+        static void SortKor(List<CStudent> _listData)
+        {
+            _listData.Sort((CStudent a, CStudent b) => { return b.Kor - a.Kor; });
+
+            Console.WriteLine("국어 점수 정렬");
+            PrintList(_listData);
+        }
+
+        static void FindDataUp(List<CStudent> _listData, bool isUp)
+        {
+            Console.WriteLine("총점 이상을 찾을까요?(점수를 입력하세요)");
+            string inputData = Console.ReadLine();
+            int num = 0;
+
+            try
+            {
+                num = int.Parse(inputData);
+            }
+            catch (FormatException e)
+            {
+                Console.Clear();
+                Console.WriteLine("입력값 {0} 잘못된 입력입니다. 숫자만 입력하세요!!", num);
+            }
+            finally
+            {
+                if (num <= 0)
+                {
+                    Console.Clear();
+                    Console.WriteLine("입력값 {0} 잘못된 입력입니다. 작은 수 입니다.!!", num);
+                }
+
+                if (num >= 300)
+                {
+                    Console.Clear();
+                    Console.WriteLine("입력값 {0} 잘못된 입력입니다. 큰 수 입니다.!!", num);
+                }
+            }
+
+            if (num >= 0 && num <= 300)
+            {
+                if (isUp)
+                {
+                    var findData =
+                        from item in _listData
+                        where item.Total >= num
+                        select item;
+
+                    List<CStudent> toData = findData.ToList<CStudent>();
+                    PrintList(toData);
+                    SortId(toData);
+                    SortTotal(toData);
+                }
+                else
+                {
+                    List<CStudent> findList = _listData.FindAll((data) => data.Total <= num);
+
+                    PrintList(findList);
+
+                    SortId(findList);
+
+                    SortTotal(findList);
+                }
             }
         }
     }
