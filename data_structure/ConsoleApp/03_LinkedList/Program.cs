@@ -19,6 +19,10 @@ namespace _03_LinkedList
             list.AddLast(5);
 
             list.AddFirst(0);
+            Node<int> find = list.Find(3);
+
+            list.AddAfter(find, 10);
+            list.Remove(find);
 
             Console.WriteLine(list.ToString());
         }

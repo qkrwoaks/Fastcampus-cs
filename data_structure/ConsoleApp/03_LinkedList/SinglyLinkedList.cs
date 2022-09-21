@@ -40,6 +40,30 @@ namespace _03_LinkedList
             m_head = node;
         }
 
+        internal Node<T> Find(T value)
+        {
+            if (m_head != null)
+            {
+                Node<T> value_Node = new Node<T>(value);
+                Node<T> node = m_head;
+
+                while (node != null)
+                {
+                    if (node.Data.Equals(value_Node.Data))
+                    {
+                        break;  
+                    }
+
+                    node = node.Next;
+                }
+                return node;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
         public override string ToString()
         {
             var temp = m_head;
@@ -55,6 +79,39 @@ namespace _03_LinkedList
             }
 
             return data;
+        }
+
+        internal void AddAfter(Node<T> findNode, T value)
+        {
+            Node<T> node = new Node<T>(value);
+
+            node.Next = findNode.Next;
+
+            findNode.Next = node;
+        }
+
+        internal void Remove(Node<T> removeNode)
+        {
+            Node<T> node = m_head;
+            Node<T> nodeBefore = null;
+
+            while (node != removeNode)
+            {
+                nodeBefore = node;
+                node = node.Next;
+            }
+
+            if (nodeBefore == null)
+            {
+                m_head = removeNode.Next;
+            }
+            else
+            {
+                nodeBefore.Next = removeNode.Next;
+                node = null;
+            }
+            
+
         }
     }
 }
