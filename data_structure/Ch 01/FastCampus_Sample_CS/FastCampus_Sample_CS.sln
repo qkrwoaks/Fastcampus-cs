@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_Stack", "04_Stack\04_Sta
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05_Queue", "05_Queue\05_Queue.csproj", "{1C66E73E-2716-4B91-BC23-6481180EF945}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06_Hashtable_Dictionary", "06_Hashtable_Dictionary\06_Hashtable_Dictionary.csproj", "{2B65AFFE-563E-4E57-93D4-6FA132805586}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{1C66E73E-2716-4B91-BC23-6481180EF945}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C66E73E-2716-4B91-BC23-6481180EF945}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C66E73E-2716-4B91-BC23-6481180EF945}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B65AFFE-563E-4E57-93D4-6FA132805586}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B65AFFE-563E-4E57-93D4-6FA132805586}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B65AFFE-563E-4E57-93D4-6FA132805586}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B65AFFE-563E-4E57-93D4-6FA132805586}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
