@@ -18,9 +18,9 @@ namespace _05_HeapSort
     {
         static void Main(string[] args)
         {
-            int[] nArrData = { 20, 35, 15, 5, 40, 10, 25, 30 };
+            int[] nArrData = { 20, 35, 15, 5, 40, 10, 25, 30 }; // 정렬할 데이터 값
 
-            for (int i = (nArrData.Length - 1) / 2; i >= 0; --i)
+            for (int i = (nArrData.Length - 1) / 2; i >= 0; --i) // 데이터 값의 가운데에서 시작
             {
                 CalcHeap(nArrData, i, nArrData.Length);
             }
@@ -30,6 +30,7 @@ namespace _05_HeapSort
                 CalcHeap(nArrData, 0, i);
             }
 
+            // 변경된 값 출력
             for (int i = 0; i < nArrData.Length; i++)
             {
                 Console.Write(nArrData[i] + ", ");
@@ -43,6 +44,7 @@ namespace _05_HeapSort
             nData2 = nTemp;
         }
 
+        // 재귀를 통한 값 정렬 함수
         static void CalcHeap(int[] nArrData, int nRoot, int nMax)
         {
             while (nRoot < nMax)
